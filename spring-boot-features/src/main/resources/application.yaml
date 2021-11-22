@@ -1,0 +1,8 @@
+spring:
+ profiles:
+  name: test
+
+person:
+ name: Pavan
+profile:
+ name: testing

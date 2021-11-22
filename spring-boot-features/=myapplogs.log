@@ -1,0 +1,7 @@
+2021-11-22 15:39:50.519  INFO 2808 --- [main] c.d.s.SpringBootFeaturesApplication      : Starting SpringBootFeaturesApplication on theta with PID 2808 (C:\workspaces\hsbc-workspace-2021\yodlee-microservices-nov21\spring-boot-features\target\classes started by sbtal in C:\workspaces\hsbc-workspace-2021\yodlee-microservices-nov21\spring-boot-features)
+2021-11-22 15:39:50.522  INFO 2808 --- [main] c.d.s.SpringBootFeaturesApplication      : The following profiles are active: test,default
+2021-11-22 15:39:51.129  INFO 2808 --- [main] c.d.s.SpringBootFeaturesApplication      : Started SpringBootFeaturesApplication in 1.117 seconds (JVM running for 2.074)
+2021-11-22 15:39:51.133  INFO 2808 --- [main] com.demo.spring.MyDemoRunner             : You are using prifle testing run by  Pavan
+2021-11-22 15:39:51.133  INFO 2808 --- [main] com.demo.spring.MyDemoRunner             : JDBC URL jdbc:mariadb://localhost:3306/springdb
+2021-11-22 15:39:51.133  INFO 2808 --- [main] com.demo.spring.MyDemoRunner             : JDBC User root
+2021-11-22 15:39:51.133  INFO 2808 --- [main] com.demo.spring.MyDemoRunner             : Emp Found with id 100
