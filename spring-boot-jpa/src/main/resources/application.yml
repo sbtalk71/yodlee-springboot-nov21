@@ -5,5 +5,11 @@ app:
   username: root
   password: root
   #type: org.springframework.jdbc.datasource.DriverManagerDatasource
-
   
+#logging:
+# level:
+#  org.springframework: debug
+
+spring:
+ jpa:
+  show_sql: true  

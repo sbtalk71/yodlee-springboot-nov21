@@ -4,12 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 @Entity
 @Table(name="EMP")
+@XmlRootElement
 public class Emp {
 	@Id
 	@Column(name="EMPNO")
+	@NotNull
 	private Integer empId;
 	
 	private String name;
@@ -20,10 +25,11 @@ public class Emp {
 	private double salary;
 
 	public Emp() {
-		
+		System.out.println("Emp Object created..");
 	}
 
 	public Integer getEmpId() {
+		System.out.println("setter called for empId..");
 		return empId;
 	}
 
@@ -36,6 +42,7 @@ public class Emp {
 	}
 
 	public void setName(String name) {
+		System.out.println("setter called for name..");
 		this.name = name;
 	}
 
@@ -44,6 +51,7 @@ public class Emp {
 	}
 
 	public void setCity(String city) {
+		System.out.println("setter called for city..");
 		this.city = city;
 	}
 
@@ -52,6 +60,7 @@ public class Emp {
 	}
 
 	public void setSalary(double salary) {
+		System.out.println("setter called for salary..");
 		this.salary = salary;
 	}
 
