@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,7 @@ public class EmpRestController {
 	EmpService service;
 
 	@GetMapping(path="find/{empId}",produces = {MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE})
+	@Cacheable(cacheNames = "empFindCache")
 	public ResponseEntity findEmp(@PathVariable("empId") int id) {
 		Emp emp = null;
 		try {
@@ -44,6 +46,7 @@ public class EmpRestController {
 	
 	
 	@GetMapping(produces = "application/json")
+	@Cacheable(cacheNames = "empFindCache")
 	public ResponseEntity<List<Emp>> getList(){
 		return ResponseEntity.ok(service.listAll());
 	}
