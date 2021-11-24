@@ -7,11 +7,13 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.springframework.hateoas.RepresentationModel;
+
 
 @Entity
 @Table(name="EMP")
 @XmlRootElement
-public class Emp {
+public class Emp /*extends RepresentationModel<Emp>*/{
 	@Id
 	@Column(name="EMPNO")
 	@NotNull
@@ -78,4 +80,5 @@ public class Emp {
 		return empId+" "+name+" "+city+" "+salary;
 	}
 
+	
 }
